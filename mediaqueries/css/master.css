@@ -1,0 +1,34 @@
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+div p {
+  font-size: 80px;
+}
+
+/* Responsive media queries */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+  div p {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  div p {
+    font-size: 30px;
+  }
+}

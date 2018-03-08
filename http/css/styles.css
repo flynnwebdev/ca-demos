@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Krona+One');
+
+
+h2 {
+  border: 1px solid green;
+}
+
+h1 {
+  font-size: 4em;
+  font-family: "Krona One", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 0.25em;
+}
+
+#mybutton {
+  background: blue;
+  color: white;
+}
+
+p.pretty {
+  color: pink;
+}
+
+section > p {
+  color: red;
+}
+
+section > article > p {
+
+}
+
+section#section1 h3 + p + p {
+  font-size: larger;
+}
+
+header h2 {
+  text-align: right;
+}
