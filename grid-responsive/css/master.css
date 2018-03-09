@@ -1,0 +1,50 @@
+nav {
+  border: 5px solid red;
+  /* Must have display: grid to enable the grid system on this element */
+  display: grid;
+  /*
+    Define grid using any number of values. The number of columns/rows equals the number of values.
+    Therefore, the below code defines 3 columns of 100px width each, and 2 rows of 70px height each.
+  */
+  /* grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 70px 70px; */
+
+  /* We can use the repeat(count, value) function as a shorthand: the next line is equivalent to the example above */
+  /* grid-template-columns: repeat(3, 100px); */
+
+  /* If we use 'auto' as the value, the columns will stretch evenly to fill the available row space */
+  grid-template-columns: 1fr 2fr 1fr;
+
+  /*
+    We can also use the fractional unit (fr) to set widths relative to each other
+    eg. this code will cause the middle column to take up 50% of the space
+  */
+  /* grid-template-columns: 1fr 2fr 1fr; */
+
+}
+
+nav div {
+  padding: 0.5em;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+nav div:first-child {
+  background-color: blue;
+}
+nav div:nth-child(2) {
+  background-color: green;
+}
+nav div:nth-child(3) {
+  background-color: purple;
+}
+nav div:nth-child(4) {
+  background-color: cyan;
+}
+nav div:nth-child(5) {
+  background-color: magenta;
+}
+nav div:nth-child(6) {
+  background-color: red;
+}

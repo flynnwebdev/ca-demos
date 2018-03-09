@@ -1,0 +1,47 @@
+/* Define a keyframe animation with name "example" */
+@keyframes example {
+  0% {
+    background-color: red;
+    top: 0;
+    left: 0;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 0;
+  }
+  100% {
+    background-color: yellow;
+    left: 200px;
+    top: 50px;
+  }
+}
+
+div.animatethis {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: red;
+  /*
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  */
+  /* The one-liner below is equivalent to all the commented code above */
+  animation: example 4s linear 2s 3 alternate forwards;
+}
+
+/* Transitions */
+.zoomin {
+  padding: 1em 2em;
+  font-size: larger;
+  transform: scale(1);
+  transition: transform 2s ease-in-out;
+}
+.zoomin:hover {
+  transform: scale(2);
+}
