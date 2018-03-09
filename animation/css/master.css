@@ -22,15 +22,28 @@ div.animatethis {
   width: 100px;
   height: 100px;
   background: red;
-  /*
-  animation-name: example;
-  animation-duration: 4s;
-  animation-delay: 2s;
-  animation-iteration-count: 3;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  */
+
+  /*** name of the keyframe set to use ***/
+  /* animation-name: example; */
+
+  /*** how long to play the animation for (seconds). Can use decimals. ***/
+  /* animation-duration: 4s;  */
+
+  /*** how long to wait before starting the animation ***/
+  /* animation-delay: 2s; */
+
+  /*** how many times to play the animation. Use infinite to play forever. ***/
+  /* animation-iteration-count: 3; */
+
+  /*** Which direction to play the animation in ***/
+  /* animation-direction: alternate; */
+
+  /*** Which timing function to use to alter the start and end speed ***/
+  /* animation-timing-function: linear; */
+
+  /*** Which styling to apply when the animation ends ***/
+  /* animation-fill-mode: forwards; */
+
   /* The one-liner below is equivalent to all the commented code above */
   animation: example 4s linear 2s 3 alternate forwards;
 }

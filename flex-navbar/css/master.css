@@ -1,3 +1,15 @@
+/* Wildcard selector (i.e. apply this styling to all elements) */
+* {
+  /*
+    By default, browsers add the padding to the width of an element when rendering, eg. if an element is 100px wide
+    and has left and right padding of 20px, then the element will actually take up 140px of width (100px + 20px + 20px)
+    The box-sizing: border-box directive changes this so the padding is assumed to be included in the width
+    (i.e. it is effectively ignored). This way, an element with width 100px will actually take up 100px of width,
+    regardless of it's padding.
+  */
+  box-sizing: border-box;
+}
+
 nav {
   border: 4px solid orange;
 }
@@ -9,20 +21,49 @@ nav {
   padding: 0;
 }
 
+.container > li {
+  flex: 1;
+  text-align: center;
+}
+
 .search-input {
+  width: 100%;
   padding: 0;
   border: 0;
   border-bottom: 1px solid white;
+  background: none;
 }
 
 input::placeholder {
   color: white;
 }
 
-li, input {
+.container > li,
+input {
   background: skyblue;
   padding: 0.5em;
   font-family: sans-serif;
   font-size: 25px;
   color: white;
+}
+
+@media all and (max-width: 600px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .container > li {
+    flex-basis: 50%;
+  }
+  .search-input {
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .container > li {
+    flex-basis: 100%;
+  }
+  .search {
+    order: 1;
+  }
 }
